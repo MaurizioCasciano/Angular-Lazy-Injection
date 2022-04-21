@@ -5,7 +5,12 @@ export const APP_BASE_HREF_PROVIDER = {
   provide: APP_BASE_HREF,
   useFactory: (service: BaseHrefService) => {
     if (!service.value) {
-      service.next(window.location.pathname);
+      const value = () => {
+        // window.location.pathname
+        return "/Test-Base-Href";
+      }
+
+      service.next(value());
     }
 
     return service.value;

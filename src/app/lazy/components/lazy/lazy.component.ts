@@ -11,5 +11,4 @@ export class LazyComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
