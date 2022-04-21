@@ -4,6 +4,8 @@ import {BaseHrefService} from "../lazy/services/base-href/base-href.service";
 export const APP_BASE_HREF_PROVIDER = {
   provide: APP_BASE_HREF,
   useFactory: (service: BaseHrefService) => {
+    console.log("App Base Href Factory");
+
     if (!service.value) {
       const value = () => {
         // window.location.pathname
